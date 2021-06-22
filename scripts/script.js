@@ -3,6 +3,8 @@ const back ="card_back"
 const CARD = "card"
 const ICON = "icon"
 
+/*
+
 let techs = ['bootstrap',
 'css',
 'react',
@@ -15,6 +17,8 @@ let techs = ['bootstrap',
 'c'];
 
 let cards = null;
+
+*/
 starGame();
 
 function starGame(){
