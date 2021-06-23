@@ -11,12 +11,18 @@ let game = {
 'c'],
 
  cards : null,
-  createCardsFromTechs:function(techs){
+  createCardsFromTechs:function(){
    this.cards = [];
-    for (let tech of techs){
-        this.cards.push(this.createPairFromTech(tech));
 
-    }
+   this.techs.forEach(tech => {
+    this.cards.push(this.createPairFromTech(tech));
+       
+  /*
+    for (let tech of techs){
+ */
+        
+
+    })
     return this.cards.flatMap(pair => pair);},
 
     createPairFromTech: function (tech){

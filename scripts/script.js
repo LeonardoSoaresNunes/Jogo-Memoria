@@ -22,7 +22,7 @@ let cards = null;
 starGame();
 
 function starGame(){
-    cards = createCardsFromTechs(techs);
+    cards = game.createCardsFromTechs();
     shuffCards(cards);
    /* console.log(cards);*/
 
@@ -84,6 +84,7 @@ function shuffCards(cards){
 
 createCardsFromTechs(techs);
 
+/*
 
 function createCardsFromTechs(techs){
     let cards = [];
@@ -106,7 +107,7 @@ function creatIdwidthTech(tech){
     return tech + parseInt(Math.random()*1000);
 }
 
-
+*/
 function  flipCard(){
     this.classList.add("flip");
 
