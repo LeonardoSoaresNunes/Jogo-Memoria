@@ -48,11 +48,12 @@ function starGame(){
     }
 }
 
+
 function creatCardContent(card , cardElement){
 
     creatCardFace( FRONT , card , cardElement);
-    creatCardFace(BACK , card , cardElement);
-    let cardElement = document.createElement('div');
+    creatCardFace(BACK , card , cardElement);  
+    let cardElement = document.createElement('div');/*Erro nessa Linha  CardElement ja foi Declarado  */
 
     cardElementFace.classList.add(face)
     if(face === FRONT){
@@ -116,14 +117,19 @@ function  flipCard(){
         game.clearCards();
 
     }else{
+
+        setTimeout(()=>{
         
         let firstCardView = document.getElementById(game.firstCard.id);
         let secondCard = document.getElementById (game.secondCard.id);
 
         firstCardView.classList.remove('flip');
         secondCardView.classList.remove('flip');
+        game.clearCards();
 
-    }
+        },1000);
+
+    };
    }
 
 }

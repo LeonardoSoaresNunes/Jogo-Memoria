@@ -6,7 +6,8 @@ let game = {
 
     setCard:function(id){
 
-        this.cards.filter(card=>card.id===id)[0];
+    let card = this.cards.filter(card=>card.id===id)[0];
+    console.log(card);
 
         if(card.flipped || this.lockMode){
             return false;
@@ -26,12 +27,16 @@ let game = {
     },
 
     checkMatch:function(){
+        if(!this.firstCard || !this.secondCard){
+            return false;
+        }
+
         return this.firstCard.icon == this.secondCard.icon;
    },
 
    clearCards:function(){
        this.firstCard = null;
-       this.secondCard == null;
+       this.secondCard = null;
        this.lockMode = false;
    },
 
@@ -73,7 +78,9 @@ let game = {
         }]
     }
 }
- creatIdwidthTech:function (tech){
+
+
+ creatIdwidthTech:function (tech){       /*Erro nessa Linha Corrigir declaração nome de função*/
      
     return tech + parseInt(Math.random()*1000);
 }
